@@ -1,0 +1,393 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Press+Start+2P&display=swap');
+
+/* CSS Variables - Pokemon Theme Palette */
+:root {
+    --bg-color: #f0f4f8;
+    --surface-color: #ffffff;
+    --text-main: #2b2b2b;
+    --text-muted: #595959;
+    --poke-red: #ee1515;
+    --poke-blue: #3b4cca;
+    --poke-yellow: #ffcb05;
+    --poke-black: #222224;
+    --transition-speed: 0.4s;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-y: scroll;
+}
+
+/* Typography Overrides for Theme */
+h1.page-title, h2.card-title, .card-tag {
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Header & Navigation (Pokedex Top) */
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--poke-red);
+    border-bottom: 5px solid var(--poke-black);
+    z-index: 1000;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    text-shadow: 2px 2px 0px var(--poke-black);
+}
+
+/* Pokedex Camera Lens */
+.pokedex-lens {
+    width: 35px;
+    height: 35px;
+    background-color: #29b6f6;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: inset -2px -2px 4px rgba(0,0,0,0.4), 0 0 0 3px var(--poke-black);
+}
+
+.header-center {
+    font-weight: 700;
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
+    padding: 0.5rem 0.75rem;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--poke-yellow);
+    color: var(--poke-black);
+    border: 2px solid var(--poke-black);
+    box-shadow: 2px 2px 0px var(--poke-black);
+}
+
+/* Layout & Typography */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+h1.page-title {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    color: var(--poke-black);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+p.page-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    max-width: 700px;
+    font-weight: 500;
+}
+
+/* Grid & Cards (Trading Card Style) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background-color: var(--surface-color);
+    border: 4px solid var(--poke-black);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 6px 6px 0px var(--poke-black);
+}
+
+.card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 10px 10px 0px var(--poke-black);
+}
+
+/* Styled like Pokemon Type Badges */
+.card-tag {
+    align-self: flex-start;
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    color: var(--poke-black);
+    background-color: var(--poke-yellow);
+    padding: 6px 10px;
+    border: 2px solid var(--poke-black);
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Tag Color Variations */
+.tag-blue { background-color: #6890F0; color: white; }
+.tag-green { background-color: #78C850; color: white; }
+.tag-red { background-color: #F08030; color: white; }
+
+.card-title {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    color: var(--poke-black);
+}
+
+.card-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.card-link {
+    text-decoration: none;
+    color: white;
+    background-color: var(--poke-blue);
+    font-weight: 600;
+    font-size: 0.9rem;
+    align-self: flex-start;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--poke-black);
+    border-radius: 6px;
+    transition: background-color 0.2s;
+    box-shadow: 2px 2px 0px var(--poke-black);
+}
+
+.card-link:hover {
+    background-color: #2a52be;
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px var(--poke-black);
+}
+
+/* Video specific placeholders */
+.video-thumbnail {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: var(--poke-black);
+    border: 3px solid var(--poke-black);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Page Transitions */
+#main-content {
+    opacity: 0;
+    transform: scale(0.98) translateY(10px);
+    transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+#main-content.page-enter {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+#main-content.page-exit {
+    opacity: 0;
+    transform: scale(0.98) translateY(-10px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header-center {
+        display: none;
+    }
+    nav {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+    }
+}
+
+/* Chapter Navigation */
+.chapter-nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+.chapter-btn {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
+    padding: 0.8rem 1.2rem;
+    background-color: var(--surface-color);
+    color: var(--poke-black);
+    border: 3px solid var(--poke-black);
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px var(--poke-black);
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+}
+.chapter-btn:hover, .chapter-btn.active {
+    background-color: var(--poke-yellow);
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px var(--poke-black);
+}
+
+/* Updated Card Actions layout */
+.card-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: auto;
+    flex-wrap: wrap;
+}
+button.card-link {
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    border: 2px solid var(--poke-black); /* Enforce retro button feel */
+}
+
+/* Inline Code Accordion */
+.inline-code-container {
+    margin-top: 1.5rem;
+    background-color: #1e1e1e; /* Dark editor theme */
+    color: #d4d4d4;
+    padding: 0;
+    border-radius: 6px;
+    border: 3px solid var(--poke-black);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.4s ease;
+}
+.inline-code-container.show {
+    max-height: 500px; 
+    opacity: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    overflow-x: auto; /* ADDED: Allows the container to scroll sideways */
+}
+
+.inline-code-container pre {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+    overflow-x: auto; /* ADDED: Forces a scrollbar for long code lines */
+    padding-bottom: 8px; /* Gives a little breathing room so the scrollbar doesn't cover the text */
+}
+
+/* Modal Overlay & Structure */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.modal-content {
+    width: 90%;
+    max-width: 800px;
+    max-height: 85vh;
+    background-color: var(--bg-color);
+    transform: scale(0.95) translateY(20px);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.modal-overlay.active .modal-content {
+    transform: scale(1) translateY(0);
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid var(--poke-black);
+}
+.close-modal-btn {
+    background: var(--poke-red);
+    color: white;
+    border: 3px solid var(--poke-black);
+    font-family: 'Press Start 2P', cursive;
+    padding: 0.5rem 0.6rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px var(--poke-black);
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+.close-modal-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 0px 0px 0px var(--poke-black);
+}
+.modal-body pre {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 3px solid var(--poke-black);
+    overflow-y: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Vanilla Syntax Highlighting Colors */
+.syn-keyword { color: #569cd6; font-weight: bold; }
+.syn-string { color: #ce9178; }
+.syn-comment { color: #6a9955; font-style: italic; }
+.syn-class { color: #4ec9b0; font-weight: bold; }
+.syn-type { color: #4ec9b0; }

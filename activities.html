@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Pokédex | Activities</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* PDF Modal Specific Styles (Ensures plug-and-play without editing styles.css) */
+        #pdf-modal .modal-content {
+            max-width: 900px;
+            height: 90vh; /* Taller for document reading */
+            display: flex;
+            flex-direction: column;
+        }
+        #pdf-modal .modal-body {
+            flex-grow: 1;
+            padding: 0;
+            overflow: hidden;
+            border: 3px solid var(--poke-black);
+            border-radius: 6px;
+            background-color: #525659; /* Standard PDF viewer background */
+        }
+        iframe.pdf-viewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="pokedex-lens"></div>
+            JOHANNE SAMUEL DELOS SANTOS<br>CPE Student
+        </div>
+        <div class="header-center">Object-Oriented Programming</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="activities.html">Activities</a>
+            <a href="videos.html">Videos</a>
+            <a href="quiz.html">Quizzes</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <div class="container">
+            <h1 class="page-title">Activity Logs</h1>
+            <p class="page-subtitle">Source code and documentation for laboratory exercises and engineering programming assignments.</p>
+            
+            <div class="chapter-nav">
+                <button class="chapter-btn active" data-target="all">All Logs</button>
+                <button class="chapter-btn" data-target="ch1">Chapter 1: Basic Concepts</button>
+                <button class="chapter-btn" data-target="ch2">Chapter 2: IDENTIFIER & CONSTANT</button>
+                <button class="chapter-btn" data-target="ch3">Chapter 3: INPUT & OUTPUT STATEMENT</button>
+                <button class="chapter-btn" data-target="ch4">Chapter 4: CONTROL STRUCTURES</button>
+                <button class="chapter-btn" data-target="ch5">Chapter 5: ANALYZING PROBLEM USING OBJECT-ORIENTED ANALYSIS</button>
+            </div>
+
+            <div class="grid" id="activities-grid">
+                
+                <div class="card" data-chapter="ch1" data-activity-id="act1">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag tag-yellow" style="background-color: var(--poke-yellow); border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 1 BASICS</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">Activity 1- Unified Modelling Language (UML)</h2>
+                    </div>
+                    <p class="card-desc">Activity 1 of Chapter 1</p>
+                    <div class="card-actions">
+                        <button class="card-link view-pdf-btn" style="background-color: #3b4cca;" data-pdf-url="ACT/CH1/ACT1.pdf">View PDF</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+                
+                <div class="card" data-chapter="ch1" data-activity-id="act2">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag tag-yellow" style="background-color: var(--poke-yellow); border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 2 BASICS</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;"> Laboratory Practice Task</h2>
+                    </div>
+                    <p class="card-desc">Lab task of Chapter 1</p>
+                    <div class="card-actions">
+                        <button class="card-link view-modal-btn">View Code</button>
+                        <button class="card-link toggle-inline-btn" style="background-color: #78C850;">Inline View</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+
+                <div class="card" data-chapter="ch2" data-activity-id="act3">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag tag-green" style="background-color: #78C850; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 3 SYNTAX</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">PRACTICE TASK - TYPE CASTING</h2>
+                    </div>
+                    <p class="card-desc">TYPE CASTING in Chapter 2</p>
+                    <div class="card-actions">
+                        <button class="card-link view-modal-btn">View Code</button>
+                        <button class="card-link toggle-inline-btn" style="background-color: #78C850;">Inline View</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+
+                <div class="card" data-chapter="ch2" data-activity-id="act4">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag tag-green" style="background-color: #78C850; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 4 SYNTAX</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">Practice Task- UNARY OPERATORS</h2>
+                    </div>
+                    <p class="card-desc">UNARY OPERATORS in Chapter 2</p>
+                    <div class="card-actions">
+                        <button class="card-link view-modal-btn">View Code</button>
+                        <button class="card-link toggle-inline-btn" style="background-color: #78C850;">Inline View</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+
+                <div class="card" data-chapter="ch2" data-activity-id="act5">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag tag-green" style="background-color: #78C850; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 5 SYNTAX</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">LABORATORY EXERCISES- CONSTANTS & VARIABLES</h2>
+                    </div>
+                    <p class="card-desc">CONSTANTS & VARIABLES in Chapter 2</p>
+                    <div class="card-actions">
+                        <button class="card-link view-modal-btn">View Code</button>
+                        <button class="card-link toggle-inline-btn" style="background-color: #78C850;">Inline View</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+
+                <div class="card" data-chapter="ch2" data-activity-id="act6">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag tag-green" style="background-color: #78C850; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 6 SYNTAX</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">ASSIGNMENT -CONSTANTS & VARIABLES</h2>
+                    </div>
+                    <p class="card-desc">ASSIGNMENT(CONSTANTS & VARIABLES) in Chapter 2</p>
+                    <div class="card-actions">
+                        <button class="card-link view-modal-btn">View Code</button>
+                        <button class="card-link toggle-inline-btn" style="background-color: #78C850;">Inline View</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+
+                <div class="card" data-chapter="ch3" data-activity-id="act7">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag tag-blue" style="background-color: #6890F0; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 10 LOGIC</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;"> Laboratory Activity - Input & Output Statement</h2>
+                    </div>
+                    <p class="card-desc"> Input & Output Statement in Chapter 3</p>
+                    <div class="card-actions">
+                        <button class="card-link view-modal-btn">View Code</button>
+                        <button class="card-link toggle-inline-btn" style="background-color: #78C850;">Inline View</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+
+                <div class="card" data-chapter="ch4" data-activity-id="act8">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag tag-red" style="background-color: #F08030; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 15 OOP</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">Laboratory Exercise - CONTROL STRUCTURE (Using Selection Statement)</h2>
+                    </div>
+                    <p class="card-desc">CONTROL STRUCTURE(Using Selection Statement) in Chapter 4</p>
+                    <div class="card-actions">
+                        <button class="card-link view-modal-btn">View Code</button>
+                        <button class="card-link toggle-inline-btn" style="background-color: #78C850;">Inline View</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+
+                <div class="card" data-chapter="ch4" data-activity-id="act9">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag tag-red" style="background-color: #F08030; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 16 OOP</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">LABORATORY EXERCISES - CONTROL STRUCTURES (Looping)</h2>
+                    </div>
+                    <p class="card-desc">CONTROL STRUCTURES(Looping) in Chapter 4</p>
+                    <div class="card-actions">
+                        <button class="card-link view-modal-btn">View Code</button>
+                        <button class="card-link toggle-inline-btn" style="background-color: #78C850;">Inline View</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+
+                <div class="card" data-chapter="ch4" data-activity-id="act10">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag tag-red" style="background-color: #F08030; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 18 OOP</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">PRACTICE TASK- CONTROL STATEMENTS</h2>
+                    </div>
+                    <p class="card-desc">CONTROL STATEMENTS in Chapter 4</p>
+                    <div class="card-actions">
+                        <button class="card-link view-modal-btn">View Code</button>
+                        <button class="card-link toggle-inline-btn" style="background-color: #78C850;">Inline View</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+
+                <div class="card" data-chapter="ch4" data-activity-id="act11">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag tag-red" style="background-color: #F08030; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 20 OOP</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">Assignment 1- Control Structures</h2>
+                    </div>
+                    <p class="card-desc">Assignment(Control Structures) in Chapter 4</p>
+                    <div class="card-actions">
+                        <button class="card-link view-modal-btn">View Code</button>
+                        <button class="card-link toggle-inline-btn" style="background-color: #78C850;">Inline View</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+
+                <div class="card" data-chapter="ch4" data-activity-id="act12">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag tag-red" style="background-color: #F08030; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 25 OOP</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">ELEVATOR WITH MULTIPLE PASSENGERS</h2>
+                    </div>
+                    <p class="card-desc">ELEVATOR in Chapter 4</p>
+                    <div class="card-actions">
+                        <button class="card-link view-modal-btn">View Code</button>
+                        <button class="card-link toggle-inline-btn" style="background-color: #78C850;">Inline View</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+
+                <div class="card" data-chapter="ch5" data-activity-id="act13">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag" style="background-color: var(--poke-black); color: white; border: 2px solid var(--text-muted); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 30 ADVANCED</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">LABORATORY ACTIVITY # 1 - CREATING OBJECT (SHIRT)</h2>
+                    </div>
+                    <p class="card-desc">CREATING OBJECT(SHIRT) in Chapter 5</p>
+                    <div class="card-actions">
+                        <button class="card-link view-modal-btn">View Code</button>
+                        <button class="card-link toggle-inline-btn" style="background-color: #78C850;">Inline View</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+
+                <div class="card" data-chapter="ch5" data-activity-id="act14">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag" style="background-color: var(--poke-black); color: white; border: 2px solid var(--text-muted); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 35 ADVANCED</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;"> LABORATORY ACTIVITY # 2- CREATING OBJECT (CUSTOMER)</h2>
+                    </div>
+                    <p class="card-desc"> CREATING OBJECT(CUSTOMER) in Chapter 5</p>
+                    <div class="card-actions">
+                        <button class="card-link view-modal-btn">View Code</button>
+                        <button class="card-link toggle-inline-btn" style="background-color: #78C850;">Inline View</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+
+                <div class="card" data-chapter="ch5" data-activity-id="act15">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag" style="background-color: var(--poke-black); color: white; border: 2px solid var(--text-muted); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 40 ADVANCED</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">Laboratory Activity # 3- CREATING OBJECT (PAYMENT)</h2>
+                    </div>
+                    <p class="card-desc">CREATING OBJECT(PAYMENT) in Chapter 5</p>
+                    <div class="card-actions">
+                        <button class="card-link view-modal-btn">View Code</button>
+                        <button class="card-link toggle-inline-btn" style="background-color: #78C850;">Inline View</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+
+                <div class="card" data-chapter="ch5" data-activity-id="act16">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
+                        <div class="card-tag" style="background-color: var(--poke-black); color: white; border: 2px solid var(--text-muted); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 50 MASTER</div>
+                        <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">Laboratory Exercise # 4- CREATING OBJECT (ORDER FORM)</h2>
+                    </div>
+                    <p class="card-desc">CREATING OBJECT(ORDER FORM) in Chapter 5</p>
+                    <div class="card-actions">
+                        <button class="card-link view-modal-btn">View Code</button>
+                        <button class="card-link toggle-inline-btn" style="background-color: #78C850;">Inline View</button>
+                    </div>
+                    <div class="inline-code-container"><pre><code class="language-java"></code></pre></div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="transitions.js"></script>
+    
+    <div id="code-modal" class="modal-overlay">
+        <div class="modal-content card">
+            <div class="modal-header">
+                <h2 class="card-title" id="modal-title">Code Viewer</h2>
+                <button class="close-modal-btn">X</button>
+            </div>
+            <div class="modal-body">
+                <pre><code id="modal-code-block" class="language-java"></code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div id="pdf-modal" class="modal-overlay">
+        <div class="modal-content card">
+            <div class="modal-header">
+                <h2 class="card-title" id="pdf-modal-title">Document Viewer</h2>
+                <button class="close-pdf-btn close-modal-btn">X</button>
+            </div>
+            <div class="modal-body">
+                    <embed id="pdf-iframe" class="pdf-viewer" src="" type="application/pdf" width="100%" height="100%">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Data Store for Activity Source Code
+        const codeDatabase = {
+            act1: ``,
+            act2: `         public class PTask1 {
+            public static void main(String[] args) {
+                System.out.println("\\n     RIZAL TECHNOLOGICAL UNIVERSITY");
+                System.out.println("   College of Engineering and Industrial Technology");
+                System.out.println("       Computer Engineering Department");
+            }
+            }
+
+         public class PTask2{
+            public static void main(String[] args) {
+                // First Dialog box
+                JOptionPane.showMessageDialog(null, "RIZAL TECHNOLOGICAL UNIVERSITY");
+
+                // Second Dialog box (Fixed line break)
+                JOptionPane.showMessageDialog(null, "College of Engineering and Industrial Technology");
+
+                // Third Dialog box
+                JOptionPane.showMessageDialog(null, "COMPUTER ENGINEERING DEPARTMENT");
+                }
+            }`,
+            act3: `     public class Delos_Santos_TypeCasting {
+
+                public static void main(String args[]) {
+
+                    char symbol;
+                    symbol = '7';
+                    System.out.println((int) symbol);
+
+                    double number1;
+                    number1 = 7.0;
+                    System.out.println((int) number1);
+
+                    byte number2;
+                    number2 = 7;
+
+                    System.out.println((char) number2);
+
+                    char number3;
+                    number3 = '7';
+
+                    System.out.println((int) (number3 - '0'));
+                }
+            }`,
+            act4: `               public class Delos_Santos_Unary1 {
+
+                public static void main(String args[]) {
+
+                int m = 7;
+                int x = 7;
+                m = ++x;
+
+                    System.out.println(m + " , " + x);
+
+                }
+            }
+                public class Delos_Santos_Unary2 {
+
+                public static void main(String args[]) {
+
+                int m = 7;
+                int x = 8;
+                m = ++x;
+
+                    System.out.println(m + " , " + x);
+
+                }
+            }
+                public class Delos_Santos_Unary3 {
+
+                public static void main(String args[]) {
+
+                int m = 9;
+                int x = 9;
+                m = x--;
+
+                    System.out.println(m + " , " + x);
+
+                }
+            }
+                public class Delos_Santos_Unary4 {
+
+                public static void main(String args[]) {
+
+                int m = 9;
+                int x = 8;
+                m = --x;
+
+                    System.out.println(m + " , " + x);
+
+                }
+            }
+                            public class Delos_Santos_Unary5 {
+
+                public static void main(String args[]) {
+
+                int m = 5;
+                int x = 6;
+                m = --x;
+
+                    System.out.println(m + " , " + x);
+
+                }
+            }
+                `,
+            act5: `public class Delos_Santos_Unary1 {
+    public static void main(String[] args) {
+        int count = 15;
+        int a, b, c, d;
+
+        a = count++;
+
+        b = count;
+
+        c = ++count;
+
+        d = count;
+
+        System.out.println(a + "," + b + "," + c + "," + d);
+    }
+}
+public class Delos_Santos_Unary2
+    {
+        public static void main(String []args)
+        {
+        int i = 16;
+        //System.out.println(++i);
+        System.out.println(i++);
+        }
+    } 
+ public class Delos_Santos_Unary3
+        {
+         public static void main(String []args)
+            {
+                char ch = '7';
+
+                System.out.println(ch + 1);
+
+                System.out.println((char)(ch + 1));
+
+                System.out.println(ch);
+
+                System.out.println((char)(ch));
+
+                System.out.println((int)(ch));
+
+                System.out.println(ch - 1);
+
+                System.out.println((int)(ch - '0'));
+
+            }
+        }`,
+            act6: `public class Delos_Santos_Age
+{
+ public static void main(String []args)
+ {
+        int ageYears = 20;
+
+        int monthsYear = 12;
+        int daysYear = 365;
+        int hoursDay = 24;
+        int secondsHour = 3600;
+        int totalMonths = ageYears * monthsYear;
+        int totalDays = ageYears * daysYear;
+        long totalHours = (long) totalDays * hoursDay;
+        long totalSeconds = totalHours * secondsHour;
+
+        System.out.println("Input: " + ageYears + " year old");
+        System.out.println("Output:");
+        System.out.println("  a. months =" + totalMonths + " months");
+        System.out.println("  b. days= " + totalDays + " days");
+        System.out.printf("  c. Hours= %, d\n", totalHours);
+        System.out.printf("  d. Seconds= %, d\n", totalSeconds);
+
+ }
+}`,
+            act7: `import java.io.*;
+import java.util.Scanner;
+import java.time.Year;
+
+public class DelosSantos_InputOutput{
+    public static void main(String [] args) throws IOException {
+        int y, d;
+        String nn, m, fm, ff, hi;
+        int cy = Year.now().getValue();
+
+        try{
+            Scanner inputDevice = new Scanner(System.in);
+            System.out.println("Nickname:   ");
+            nn = inputDevice.nextLine();
+            System.out.println("BIRTHDAY:   ");
+            System.out.println("Month:  ");
+            m = inputDevice.nextLine();
+            System.out.println("Day:    ");
+            d = inputDevice.nextInt();
+            System.out.println("Year:   ");
+            y = inputDevice.nextInt();
+            inputDevice.nextLine();
+            System.out.println("Favorite Movie(s):  ");
+            fm = inputDevice.nextLine();
+            System.out.println("Favorite Food(s):   ");
+            ff = inputDevice.nextLine();
+            System.out.println("Hobbies/Interest:   ");
+            hi = inputDevice.nextLine();
+
+            int age = cy - y;
+
+            System.out.println("\n");
+            System.out.println("    hi " +nn+ ", I hope we could celebrate this coming " +m+ " as you turn " +age+ " years old.");
+            System.out.println("    Let's watch that " +fm+ " movie that you used to watch. While having " +ff+ ".");
+            System.out.println("    Perhaps you could also teach me how to " +hi+ ".");
+            }
+            catch (Exception e) {
+                System.out.println("Error: " +e);
+        }
+    }
+}`,
+            act8: `//JOHANNE SAMUEL DELOS SANTOS
+import java.util.Scanner;
+
+public class Seasons {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Input any month of the year (CAPITAL LETTERS): ");
+        String month = input.nextLine();
+
+
+        switch (month) {
+            // Winter
+            case "DECEMBER":
+            case "JANUARY":
+            case "FEBRUARY":
+                System.out.println("\"To appreciate the beauty of a snowflake it is necessary to stand out in the cold.\"");
+                break;
+
+            // Spring
+            case "MARCH":
+            case "APRIL":
+            case "MAY":
+                System.out.println("\"Spring is the time of plans and projects.\"");
+                break;
+
+            // Summer
+            case "JUNE":
+            case "JULY":
+            case "AUGUST":
+                System.out.println("\"Summer afternoon—summer afternoon; to me those have always been the two most beautiful words in the English language.\"");
+                break;
+
+            // Fall
+            case "SEPTEMBER":
+            case "OCTOBER":
+            case "NOVEMBER":
+                System.out.println("\"And all at once, summer collapsed into fall.\"");
+                break;
+
+            default: System.out.println("\"Sorry, you have inputted an invalid or misspelled value of month of the year!\"");
+                break;
+        }
+
+        input.close();
+    }
+}`,
+            act9: `//JOHANNE SAMUEL DELOS SANTOS
+public class DoWhileSquare {
+    public int height = 5;
+    public int width = 10;
+
+    public void displaySquare() {
+        int rowCount = 0;
+
+        do {
+            int colCount = 0;
+            do {
+                System.out.print("@");
+                colCount++;
+            } while (colCount < width);
+
+            System.out.println();
+            rowCount++;
+        } while (rowCount < height);
+    }
+
+    public static void main(String[] args) {
+
+        DoWhileSquare square = new DoWhileSquare();
+        square.displaySquare();
+    }
+}
+    //JOHANNE SAMUEL DELOS SANTOS
+public class ForSquare {
+    public int height = 5;
+    public int width = 10;
+
+    public void displaySquare() {
+        for (int rowCount = 0; rowCount < height; rowCount++) {
+
+            for (int colCount = 0; colCount < width; colCount++) {
+                System.out.print("@");
+            }
+
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        ForSquare square = new ForSquare();
+        square.displaySquare();
+    }
+}
+    //JOHANNE SAMUEL DELOS SANTOS
+public class Sequence1 {
+
+    public void displaySequence() {
+        int sum = 0;
+
+        for (int ctr = 1; ctr <= 10; ctr++) {
+            sum = sum + ctr;
+            System.out.println(sum);
+        }
+    }
+
+    public static void main(String[] args) {
+        Sequence1 seq1 = new Sequence1();
+        seq1.displaySequence();
+    }
+}
+    public class Sequence2 {
+
+    public void displaySequence() {
+        int a = 1;
+        int b = 1;
+
+        System.out.println(a);
+        System.out.println(b);
+
+        for (int ctr = 0; ctr < 8; ctr++) {
+            int next = a + b;
+            System.out.println(next);
+
+            a = b;
+            b = next;
+        }
+    }
+
+    public static void main(String[] args) {
+        Sequence2 seq2 = new Sequence2();
+        seq2.displaySequence();
+    }
+}
+    public class Sequence3 {
+
+    public void displaySequence() {
+        int up = 1;
+        int down = 10;
+
+        for (int ctr = 0; ctr < 5; ctr++) {
+            System.out.println(up);
+            System.out.println(down);
+
+            up++;
+            down--;
+        }
+        System.out.println(6);
+    }
+
+    public static void main(String[] args) {
+        Sequence3 seq3 = new Sequence3();
+        seq3.displaySequence();
+    }
+}`,
+            act10: `import java.util.Scanner;
+
+public class ControlState {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int sum = 0;
+        int count = 0;
+        for (int i = 0; i < 100; i++) {
+            System.out.print("Enter a positive number: ");
+            int number = input.nextInt();
+
+            if (number <= 0) {
+             continue;
+            }
+
+            sum += number;
+            count++;
+
+            if (count == 5) {
+                break;
+            }
+        }
+
+        System.out.println("The total sum of the 5 positive numbers is: " + sum);
+    }
+}`,
+            act11: `//JOHANNE SAMUEL DELOS SANTOS
+import java.util.Scanner;
+import java.time.LocalDate;
+
+public class AgeCalculator {
+    public static void main(String[] args) {
+
+        LocalDate today = LocalDate.now();
+        int curMonth = today.getMonthValue();
+        int curDate = today.getDayOfMonth();
+        int curYear = today.getYear();
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Input: ");
+        System.out.print(" Birthday: ");
+
+        String bMonthStr = scan.next();
+        String dayStr = scan.next();
+        int bYear = scan.nextInt();
+
+        dayStr = dayStr.replace(",", "");
+        int bDate = Integer.parseInt(dayStr);
+
+        int bMonth = 0;
+        if (bMonthStr.equalsIgnoreCase("January")) { bMonth = 1; }
+        else if (bMonthStr.equalsIgnoreCase("February")) { bMonth = 2; }
+        else if (bMonthStr.equalsIgnoreCase("March")) { bMonth = 3; }
+        else if (bMonthStr.equalsIgnoreCase("April")) { bMonth = 4; }
+        else if (bMonthStr.equalsIgnoreCase("May")) { bMonth = 5; }
+        else if (bMonthStr.equalsIgnoreCase("June")) { bMonth = 6; }
+        else if (bMonthStr.equalsIgnoreCase("July")) { bMonth = 7; }
+        else if (bMonthStr.equalsIgnoreCase("August")) { bMonth = 8; }
+        else if (bMonthStr.equalsIgnoreCase("September")) { bMonth = 9; }
+        else if (bMonthStr.equalsIgnoreCase("October")) { bMonth = 10; }
+        else if (bMonthStr.equalsIgnoreCase("November")) { bMonth = 11; }
+        else if (bMonthStr.equalsIgnoreCase("December")) { bMonth = 12; }
+
+        int ageYears = curYear - bYear;
+        if (curMonth < bMonth || (curMonth == bMonth && curDate < bDate)) {
+            ageYears--;
+        }
+
+        int totalMonths = ((curYear - bYear) * 12) + (curMonth - bMonth);
+        if (curDate < bDate) {
+            totalMonths--;
+        }
+        int totalDays = 0;
+        int tempDate = bDate;
+        int tempMonth = bMonth;
+        int tempYear = bYear;
+
+        while (!(tempYear == curYear && tempMonth == curMonth && tempDate == curDate)) {
+            totalDays++;
+            tempDate++;
+
+            int daysInMonth = 31;
+            switch(tempMonth) {
+                case 4: case 6: case 9: case 11:
+                    daysInMonth = 30;
+                    break;
+                case 2:
+                    // Leap year
+                    if (((tempYear % 4 == 0) && !(tempYear % 100 == 0)) || (tempYear % 400 == 0)) {
+                        daysInMonth = 29;
+                    } else {
+                        daysInMonth = 28;
+                    }
+                    break;
+            }
+
+            if (tempDate > daysInMonth) {
+                tempDate = 1;
+                tempMonth++;
+                if (tempMonth > 12) {
+                    tempMonth = 1;
+                    tempYear++;
+                }
+            }
+        }
+
+        System.out.println("Output: ");
+        System.out.println("a. Age in Years   = " + ageYears + " yrs");
+        System.out.println("b. Age in months  = " + totalMonths + " months");
+        System.out.println("c. Age in days    = " + totalDays + " days");
+    }
+}`,
+            act12: `public class Elevator {
+    public boolean doorOpen = false;
+    public int currentFloor = 1;
+    public final int TOP_FLOOR = 10;
+    public final int MIN_FLOOR = 1;
+
+    public void openDoor() {
+        System.out.print("\\n Opening Door...");
+        doorOpen = true;
+        System.out.println("Door is open");
+    }
+
+    public void closeDoor() {
+        System.out.print("\\n Closing Door...");
+        doorOpen = false;
+        System.out.println("Door is closed");
+    }
+
+    public void goUp() {
+        if (currentFloor == TOP_FLOOR) {
+            System.out.println("You cannot go up!");
+        } else {
+            System.out.print("Going up one floor...");
+            currentFloor++;
+            System.out.println("Floor: " + currentFloor);
+        }
+    }
+
+    public void goDown() {
+        if (currentFloor == MIN_FLOOR) {
+            System.out.println("You cannot go down!");
+        } else {
+            System.out.print("Going down one floor...");
+            currentFloor--;
+            System.out.println("Floor: " + currentFloor);
+        }
+    }
+
+    public void setFloor(int desiredFloor, String passengers) {
+        while (currentFloor != desiredFloor) {
+            if (currentFloor < desiredFloor) {
+                goUp();
+            } else {
+                goDown();
+            }
+        }
+        openDoor();
+        System.out.println("\\n serving passengers " + passengers);
+        closeDoor();
+    }
+}
+    import java.util.Scanner;
+import java.util.Arrays;
+
+public class ElevatorTest {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        Elevator myElevator = new Elevator();
+
+        System.out.print("Enter No of passenger: ");
+        int numPassengers = input.nextInt();
+        int[] destinations = new int[numPassengers];
+        int[] originalDestinations = new int[numPassengers];
+
+        System.out.println("\\nDestination of");
+        for (int i = 0; i < numPassengers; i++) {
+            System.out.print("Passenger " + (i + 1) + ": ");
+            int inputtedFloor = input.nextInt();
+
+            if (inputtedFloor > myElevator.TOP_FLOOR) {
+                System.out.println("ERROR FLOORS");
+                i--;
+            } else {
+                destinations[i] = inputtedFloor;
+                originalDestinations[i] = inputtedFloor;
+            }
+        }
+
+        Arrays.sort(destinations);
+
+        System.out.print("\\nServe Floors: ");
+        for (int i = 0; i < numPassengers; i++) {
+            System.out.print(destinations[i] + (i < numPassengers - 1 ? ", " : ""));
+        }
+        System.out.println();
+
+        for (int i = 0; i < numPassengers; i++) {
+            if (i > 0 && destinations[i] == destinations[i - 1]) {
+                continue;
+            }
+
+            String passengersServing = "";
+            for (int j = 0; j < numPassengers; j++) {
+                if (originalDestinations[j] == destinations[i]) {
+                    passengersServing += (j + 1) + " ";
+                }
+            }
+
+            System.out.println("\\nMoving to floor " + destinations[i] + "...");
+            myElevator.setFloor(destinations[i], passengersServing);
+        }
+    }
+}`,
+            act13: `//JOHANNE SAMUEL DELOS SANTOS
+class Shirt {
+    public int shirtID = 0;
+    public String description = "description required";
+    public char colorCode = 'U';
+    public double price = 0.0;
+    public String status = "Available/Unavailable";
+
+    public void displayShirtInformation() {
+        System.out.println("-----------------------------------------------\\n|  Shirt ID :" + shirtID);
+        System.out.println("|   Shirt description :" + description);
+        System.out.println("|   Color Code :" + colorCode);
+        System.out.println("|   Shirt Price :" + price);
+        System.out.println("|   Status :" + status);
+    }
+}
+    //JOHANNE SAMUEL DELOS SANTOS
+public class ShirtTest3 {
+    public static void main(String args[]) {
+        Shirt firstShirt = new Shirt();
+        Shirt secondShirt = new Shirt();
+        Shirt thirdShirt = new Shirt();
+        Shirt fourthShirt = new Shirt();
+        Shirt fifthShirt = new Shirt();
+
+        firstShirt.shirtID = 1;
+        firstShirt.description = "T-Shirt";
+        firstShirt.colorCode = 'R';
+        firstShirt.price = 250.0;
+        firstShirt.status = "Available";
+
+        secondShirt.shirtID = 2;
+        secondShirt.description = "Polo Shirt";
+        secondShirt.colorCode = 'G';
+        secondShirt.price = 500.0;
+        secondShirt.status = "Available";
+
+        thirdShirt.shirtID = 3;
+        thirdShirt.description = "Long Sleeve Shirt";
+        thirdShirt.colorCode = 'B';
+        thirdShirt.price = 350.0;
+        thirdShirt.status = "Available";
+
+        fourthShirt.shirtID = 4;
+        fourthShirt.description = "V-Neck Shirt";
+        fourthShirt.colorCode = 'Y';
+        fourthShirt.price = 200.0;
+        fourthShirt.status = "Unavailable";
+
+        fifthShirt.shirtID = 5;
+        fifthShirt.description = "Graphic Tee Shirt";
+        fifthShirt.colorCode = 'W';
+        fifthShirt.price = 300.0;
+        fifthShirt.status = "Available";
+
+        firstShirt.displayShirtInformation();
+        secondShirt.displayShirtInformation();
+        thirdShirt.displayShirtInformation();
+        fourthShirt.displayShirtInformation();
+        fifthShirt.displayShirtInformation();
+    }
+}`,
+            act14: `//JOHANNE SAMUEL DELOS SANTOS
+class Customer {
+    public int customerID = 0;
+    public String name = "Name Required";
+    public String address = "Address Required";
+    public String phoneNumber = "00000000000";
+    public String emailAddress = "email@required.com";
+    public String customerStatus = "New/Returning";
+
+    public void displayCustomerInfo() {
+        System.out.println("Customer ID      : " + customerID);
+        System.out.println("Name             : " + name);
+        System.out.println("Address          : " + address);
+        System.out.println("Phone Number     : " + phoneNumber);
+        System.out.println("Email Address    : " + emailAddress);
+        System.out.println("Customer Status  : " + customerStatus);
+    }
+}
+//JOHANNE SAMUEL DELOS SANTOS
+public class CustomerTest {
+    public static void main(String args[]) {
+        Customer firstCustomer = new Customer();
+        Customer secondCustomer = new Customer();
+
+        firstCustomer.customerID = 1001;
+        firstCustomer.name = "Delos Santos";
+        firstCustomer.address = "Rizal Technological University";
+        firstCustomer.phoneNumber = "09123456789";
+        firstCustomer.emailAddress = "delossantos@student.rtu.edu.ph";
+        firstCustomer.customerStatus = "New";
+
+        System.out.println("--- Customer 1 Details ---");
+        firstCustomer.displayCustomerInfo();
+
+    }
+}`,
+            act15: `//JOHANNE SAMUEL DELOS SANTOS
+class Payment {
+    public String transDate = "MM/DD/YYYY";
+    public String modeOfPayment = "Cash/Card";
+    public int customerID = 0;
+    public String name = "Name Required";
+    public String cExDate = "MM/YY";
+    public String cardNo = "0000 0000 0000 0000";
+    public double totalPrice = 0.0;
+
+    public void displayPaymentInfo() {
+        System.out.println("Transaction Date  : " + transDate);
+        System.out.println("Mode of Payment   : " + modeOfPayment);
+        System.out.println("Customer ID       : " + customerID);
+        System.out.println("Name              : " + name);
+        System.out.println("Card Expiry Date  : " + cExDate);
+        System.out.println("Card Number       : " + cardNo);
+        System.out.println("Total Price       : " + totalPrice);
+    }
+}
+//JOHANNE SAMUEL DELOS SANTOS
+public class PaymentTest {
+    public static void main(String args[]) {
+        // Instantiating objects
+        Payment firstPayment = new Payment();
+        Payment secondPayment = new Payment();
+
+        firstPayment.transDate = "04/24/2026";
+        firstPayment.modeOfPayment = "Credit Card";
+        firstPayment.customerID = 1001;
+        firstPayment.name = "Delos Santos";
+        firstPayment.cExDate = "12/28";
+        firstPayment.cardNo = "1234 5678 9101 1121";
+        firstPayment.totalPrice = 1250.00;
+
+        System.out.println("--- Payment 1 Details ---");
+        firstPayment.displayPaymentInfo();
+        
+    }
+}`,
+            act16: `//JOHANNE SAMUEL DELOS SANTOS
+class Order {
+
+    public String date = "MM/DD/YYYY";
+    public String name = "Required";
+    public String address = "Required";
+
+    //Row 1
+    public int shirtID1 = 0; public String size1 = ""; public String description1 = "";
+    public char colorCode1 = 'U'; public int qty1 = 0; public double unitPrice1 = 0.0; public double amount1 = 0.0;
+
+    //Row 2
+    public int shirtID2 = 0; public String size2 = ""; public String description2 = "";
+    public char colorCode2 = 'U'; public int qty2 = 0; public double unitPrice2 = 0.0; public double amount2 = 0.0;
+
+    //Row 3
+    public int shirtID3 = 0; public String size3 = ""; public String description3 = "";
+    public char colorCode3 = 'U'; public int qty3 = 0; public double unitPrice3 = 0.0; public double amount3 = 0.0;
+
+    //Row 4
+    public int shirtID4 = 0; public String size4 = ""; public String description4 = "";
+    public char colorCode4 = 'U'; public int qty4 = 0; public double unitPrice4 = 0.0; public double amount4 = 0.0;
+
+    //Payment
+    public String paymentMethod = "Check/Credit Card";
+    public String creditCardNo = "N/A";
+    public double totalPrice = 0.0;
+
+    public void computeAmount() {
+        amount1 = qty1 * unitPrice1;
+        amount2 = qty2 * unitPrice2;
+        amount3 = qty3 * unitPrice3;
+        amount4 = qty4 * unitPrice4;
+    }
+
+    public void computeTotalPrice() {
+        totalPrice = amount1 + amount2 + amount3 + amount4;
+    }
+S
+    public void displayOrderInfo() {
+        System.out.println("===============================================================");
+        System.out.println("                      SAM CLOTHING INC.");
+        System.out.println("                  \"The Best SHIRT Maker\"");
+        System.out.println("===============================================================");
+        System.out.println("Name: " + name + " \\t\\tDate: " + date);
+        System.out.println("Address: " + address);
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("ID\\tSize\\tDescription\\tColor\\tQty\\tPrice\\tAmount");
+        System.out.println("---------------------------------------------------------------");
+
+        if (shirtID1 != 0) System.out.println(shirtID1 + "\\t" + size1 + "\\t" + description1 + "\\t\\t" + colorCode1 + "\\t" + qty1 + "\\t" + unitPrice1 + "\\t" + amount1);
+        if (shirtID2 != 0) System.out.println(shirtID2 + "\\t" + size2 + "\\t" + description2 + "\\t\\t" + colorCode2 + "\\t" + qty2 + "\\t" + unitPrice2 + "\\t" + amount2);
+        if (shirtID3 != 0) System.out.println(shirtID3 + "\\t" + size3 + "\\t" + description3 + "\\t\\t" + colorCode3 + "\\t" + qty3 + "\\t" + unitPrice3 + "\\t" + amount3);
+        if (shirtID4 != 0) System.out.println(shirtID4 + "\\t" + size4 + "\\t" + description4 + "\\t\\t" + colorCode4 + "\\t" + qty4 + "\\t" + unitPrice4 + "\\t" + amount4);
+
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("\\t\\t\\t\\t\\t\\tTotal Price: " + totalPrice);
+        System.out.println("\\nPayment: " + paymentMethod);
+        System.out.println("Credit Card No: " + creditCardNo);
+        System.out.println("===============================================================\\n");
+    }
+}
+//JOHANNE SAMUEL DELOS SANTOS
+public class OrderTest {
+    public static void main(String args[]) {
+
+        // --- ORDER 1 ---
+        Order order1 = new Order();
+        order1.date = "05/01/2026"; order1.name = "Jonas"; order1.address = "Manila City";
+        order1.shirtID1 = 1; order1.size1 = "M"; order1.description1 = "Polo"; order1.colorCode1 = 'R'; order1.qty1 = 2; order1.unitPrice1 = 500.0;
+        order1.shirtID2 = 2; order1.size2 = "L"; order1.description2 = "T-Shirt"; order1.colorCode2 = 'B'; order1.qty2 = 1; order1.unitPrice2 = 250.0;
+        order1.shirtID3 = 3; order1.size3 = "S"; order1.description3 = "V-Neck"; order1.colorCode3 = 'W'; order1.qty3 = 3; order1.unitPrice3 = 300.0;
+        order1.paymentMethod = "Credit Card"; order1.creditCardNo = "1111-2222-3333-4444";
+        order1.computeAmount(); order1.computeTotalPrice();
+        order1.displayOrderInfo();
+
+        // --- ORDER 2 ---
+        Order order2 = new Order();
+        order2.date = "05/02/2026"; order2.name = "Dex"; order2.address = "Quezon City";
+        order2.shirtID1 = 4; order2.size1 = "XL"; order2.description1 = "Graphic Tee"; order2.colorCode1 = 'G'; order2.qty1 = 1; order2.unitPrice1 = 350.0;
+        order2.shirtID2 = 5; order2.size2 = "M"; order2.description2 = "Tank Top"; order2.colorCode2 = 'Y'; order2.qty2 = 2; order2.unitPrice2 = 200.0;
+        order2.shirtID3 = 6; order2.size3 = "L"; order2.description3 = "Long Sleeve"; order2.colorCode3 = 'K'; order2.qty3 = 1; order2.unitPrice3 = 400.0;
+        order2.paymentMethod = "Check"; order2.creditCardNo = "N/A";
+        order2.computeAmount(); order2.computeTotalPrice();
+        order2.displayOrderInfo();
+
+        // --- ORDER 3 ---
+        Order order3 = new Order();
+        order3.date = "05/03/2026"; order3.name = "Karla"; order3.address = "Makati City";
+        order3.shirtID1 = 1; order3.size1 = "S"; order3.description1 = "Polo"; order3.colorCode1 = 'W'; order3.qty1 = 4; order3.unitPrice1 = 500.0;
+        order3.shirtID2 = 2; order3.size2 = "S"; order3.description2 = "T-Shirt"; order3.colorCode2 = 'B'; order3.qty2 = 2; order3.unitPrice2 = 250.0;
+        order3.shirtID3 = 3; order3.size3 = "M"; order3.description3 = "V-Neck"; order3.colorCode3 = 'R'; order3.qty3 = 1; order3.unitPrice3 = 300.0;
+        order3.paymentMethod = "Credit Card"; order3.creditCardNo = "5555-6666-7777-8888";
+        order3.computeAmount(); order3.computeTotalPrice();
+        order3.displayOrderInfo();
+
+        // --- ORDER 4 ---
+        Order order4 = new Order();
+        order4.date = "05/04/2026"; order4.name = "Emman"; order4.address = "Pasig City";
+        order4.shirtID1 = 4; order4.size1 = "M"; order4.description1 = "Graphic Tee"; order4.colorCode1 = 'P'; order4.qty1 = 1; order4.unitPrice1 = 350.0;
+        order4.shirtID2 = 6; order4.size2 = "L"; order4.description2 = "Long Sleeve"; order4.colorCode2 = 'O'; order4.qty2 = 1; order4.unitPrice2 = 400.0;
+        order4.shirtID3 = 5; order4.size3 = "XL"; order4.description3 = "Tank Top"; order4.colorCode3 = 'W'; order4.qty3 = 3; order4.unitPrice3 = 200.0;
+        order4.paymentMethod = "Credit Card"; order4.creditCardNo = "9999-0000-1111-2222";
+        order4.computeAmount(); order4.computeTotalPrice();
+        order4.displayOrderInfo();
+
+        // --- ORDER 5 ---
+        Order order5 = new Order();
+        order5.date = "05/05/2026"; order5.name = "Sam"; order5.address = "Taguig City";
+        order5.shirtID1 = 2; order5.size1 = "XXL"; order5.description1 = "T-Shirt"; order5.colorCode1 = 'B'; order5.qty1 = 5; order5.unitPrice1 = 250.0;
+        order5.shirtID2 = 1; order5.size2 = "XXL"; order5.description2 = "Polo"; order5.colorCode2 = 'W'; order5.qty2 = 2; order5.unitPrice2 = 500.0;
+        order5.shirtID3 = 3; order5.size3 = "XL"; order5.description3 = "V-Neck"; order5.colorCode3 = 'G'; order5.qty3 = 2; order5.unitPrice3 = 300.0;
+        order5.paymentMethod = "Check"; order5.creditCardNo = "N/A";
+        order5.computeAmount(); order5.computeTotalPrice();
+        order5.displayOrderInfo();
+    }
+}`
+        };
+
+        // 2. Improved Syntax Highlighter (Regex Collision Safe)
+        function highlightJavaCode(code) {
+            if (!code) return "// Code not found for this activity.";
+
+            // Step 1: Escape HTML brackets so real code doesn't break the page
+            let highlighted = code.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+            // Step 2: Mask the strings. Save them in an array and replace them with a safe placeholder.
+            const savedStrings = [];
+            highlighted = highlighted.replace(/(".*?")/g, (match) => {
+                savedStrings.push(match);
+                return `___STR_TOKEN_${savedStrings.length - 1}___`;
+            });
+
+            // Step 3: Highlight Java Keywords and Types (Safe to do now!)
+            highlighted = highlighted
+                .replace(/\b(public|class|static|void|import|new|return|if|else|for|while|switch|case|default|break|continue|do|try|catch)\b/g, '<span class="syn-keyword">$1</span>')
+                .replace(/\b(int|double|float|boolean|String|char|byte|long)\b/g, '<span class="syn-type">$1</span>')
+                .replace(/(\/\/.*)/g, '<span class="syn-comment">$1</span>');
+
+            // Step 4: Unmask the strings and apply their color
+            savedStrings.forEach((str, index) => {
+                highlighted = highlighted.replace(`___STR_TOKEN_${index}___`, `<span class="syn-string">${str}</span>`);
+            });
+
+            return highlighted;
+        }
+
+        // 3. Main Interactive Logic
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // --- Feature A: Chapter Filter Drill-Down ---
+            const chapterBtns = document.querySelectorAll(".chapter-btn");
+            const cards = document.querySelectorAll(".card[data-chapter]");
+
+            chapterBtns.forEach(btn => {
+                btn.addEventListener("click", () => {
+                    chapterBtns.forEach(b => b.classList.remove("active"));
+                    btn.classList.add("active");
+
+                    const target = btn.getAttribute("data-target");
+                    cards.forEach(card => {
+                        if (target === "all" || card.getAttribute("data-chapter") === target) {
+                            card.style.display = "flex";
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+                });
+            });
+
+            // --- Feature B: Code Modal Logic ---
+            const codeModal = document.getElementById("code-modal");
+            const modalCodeBlock = document.getElementById("modal-code-block");
+            const codeModalTitle = document.getElementById("modal-title");
+            const closeCodeBtn = document.querySelector("#code-modal .close-modal-btn");
+
+            document.querySelectorAll(".view-modal-btn").forEach(btn => {
+                btn.addEventListener("click", (e) => {
+                    const card = e.target.closest(".card");
+                    const activityId = card.getAttribute("data-activity-id");
+                    const title = card.querySelector(".card-title").innerText;
+                    
+                    codeModalTitle.innerText = title;
+                    modalCodeBlock.innerHTML = highlightJavaCode(codeDatabase[activityId]);
+                    codeModal.classList.add("active");
+                });
+            });
+
+            closeCodeBtn.addEventListener("click", () => codeModal.classList.remove("active"));
+            codeModal.addEventListener("click", (e) => {
+                if(e.target === codeModal) codeModal.classList.remove("active");
+            });
+
+            // --- Feature C: Collapsible Inline Code Logic ---
+            document.querySelectorAll(".toggle-inline-btn").forEach(btn => {
+                btn.addEventListener("click", (e) => {
+                    const card = e.target.closest(".card");
+                    const activityId = card.getAttribute("data-activity-id");
+                    const container = card.querySelector(".inline-code-container");
+                    const codeBlock = container.querySelector("code");
+
+                    if (!codeBlock.innerHTML.trim()) {
+                        codeBlock.innerHTML = highlightJavaCode(codeDatabase[activityId]);
+                    }
+
+                    container.classList.toggle("show");
+                    
+                    if (container.classList.contains("show")) {
+                        btn.innerText = "Close Inline";
+                        btn.style.backgroundColor = "var(--poke-red)";
+                    } else {
+                        btn.innerText = "Inline View";
+                        btn.style.backgroundColor = "#78C850";
+                    }
+                });
+            });
+
+            // --- Feature D: PDF Modal Logic ---
+            const pdfModal = document.getElementById("pdf-modal");
+            const pdfIframe = document.getElementById("pdf-iframe");
+            const pdfModalTitle = document.getElementById("pdf-modal-title");
+            const closePdfBtn = document.querySelector(".close-pdf-btn");
+
+            document.querySelectorAll(".view-pdf-btn").forEach(btn => {
+                btn.addEventListener("click", (e) => {
+                    const card = e.target.closest(".card");
+                    const title = card.querySelector(".card-title").innerText;
+                    // Get the URL from the data attribute
+                    const pdfUrl = e.target.getAttribute("data-pdf-url");
+                    
+                    pdfModalTitle.innerText = title + " (Document)";
+                    pdfIframe.src = pdfUrl; // Load the PDF into the iframe
+                    pdfModal.classList.add("active");
+                });
+            });
+
+            // Close PDF Modal and clear iframe (to stop loading if closed early)
+            closePdfBtn.addEventListener("click", () => {
+                pdfModal.classList.remove("active");
+                setTimeout(() => pdfIframe.src = "", 300); 
+            });
+            pdfModal.addEventListener("click", (e) => {
+                if(e.target === pdfModal) {
+                    pdfModal.classList.remove("active");
+                    setTimeout(() => pdfIframe.src = "", 300);
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
