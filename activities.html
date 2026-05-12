@@ -6,10 +6,10 @@
     <title>Java Pokédex | Activities</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* PDF Modal Specific Styles (Ensures plug-and-play without editing styles.css) */
+        /* PDF Modal Specific Styles */
         #pdf-modal .modal-content {
             max-width: 900px;
-            height: 90vh; /* Taller for document reading */
+            height: 90vh;
             display: flex;
             flex-direction: column;
         }
@@ -19,13 +19,40 @@
             overflow: hidden;
             border: 3px solid var(--poke-black);
             border-radius: 6px;
-            background-color: #525659; /* Standard PDF viewer background */
+            background-color: #525659; 
         }
         iframe.pdf-viewer {
             width: 100%;
             height: 100%;
             border: none;
             display: block;
+        }
+
+        /* --- Code Modal Scroll Fix --- */
+        #code-modal .modal-content {
+            max-width: 900px;
+            max-height: 90vh; 
+            display: flex;
+            flex-direction: column;
+        }
+        #code-modal .modal-body {
+            flex-grow: 1;
+            overflow-y: auto; 
+            padding: 0;
+        }
+        #code-modal pre {
+            margin: 0;
+            overflow-x: auto; 
+            min-height: 100%;
+        }
+
+        /* --- Expanded Card Styles for Inline View --- */
+        .card.card-expanded {
+            grid-column: 1 / -1; 
+            z-index: 10;
+            transform: scale(1.02); 
+            box-shadow: 12px 12px 0px var(--poke-black);
+            transition: all 0.3s ease;
         }
     </style>
 </head>
@@ -62,7 +89,7 @@
                 
                 <div class="card" data-chapter="ch1" data-activity-id="act1">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag tag-yellow" style="background-color: var(--poke-yellow); border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 1 BASICS</div>
+                        <div class="card-tag tag-yellow" style="background-color: var(--poke-yellow); border: 2px solid var(--poke-black); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 1 BASICS</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">Activity 1- Unified Modelling Language (UML)</h2>
                     </div>
                     <p class="card-desc">Activity 1 of Chapter 1</p>
@@ -74,7 +101,7 @@
                 
                 <div class="card" data-chapter="ch1" data-activity-id="act2">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag tag-yellow" style="background-color: var(--poke-yellow); border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 2 BASICS</div>
+                        <div class="card-tag tag-yellow" style="background-color: var(--poke-yellow); border: 2px solid var(--poke-black); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 2 BASICS</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;"> Laboratory Practice Task</h2>
                     </div>
                     <p class="card-desc">Lab task of Chapter 1</p>
@@ -87,7 +114,7 @@
 
                 <div class="card" data-chapter="ch2" data-activity-id="act3">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag tag-green" style="background-color: #78C850; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 3 SYNTAX</div>
+                        <div class="card-tag tag-green" style="background-color: #78C850; color: white; border: 2px solid var(--poke-black); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 3 SYNTAX</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">PRACTICE TASK - TYPE CASTING</h2>
                     </div>
                     <p class="card-desc">TYPE CASTING in Chapter 2</p>
@@ -100,7 +127,7 @@
 
                 <div class="card" data-chapter="ch2" data-activity-id="act4">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag tag-green" style="background-color: #78C850; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 4 SYNTAX</div>
+                        <div class="card-tag tag-green" style="background-color: #78C850; color: white; border: 2px solid var(--poke-black); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 4 SYNTAX</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">Practice Task- UNARY OPERATORS</h2>
                     </div>
                     <p class="card-desc">UNARY OPERATORS in Chapter 2</p>
@@ -113,7 +140,7 @@
 
                 <div class="card" data-chapter="ch2" data-activity-id="act5">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag tag-green" style="background-color: #78C850; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 5 SYNTAX</div>
+                        <div class="card-tag tag-green" style="background-color: #78C850; color: white; border: 2px solid var(--poke-black); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 5 SYNTAX</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">LABORATORY EXERCISES- CONSTANTS & VARIABLES</h2>
                     </div>
                     <p class="card-desc">CONSTANTS & VARIABLES in Chapter 2</p>
@@ -126,7 +153,7 @@
 
                 <div class="card" data-chapter="ch2" data-activity-id="act6">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag tag-green" style="background-color: #78C850; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 6 SYNTAX</div>
+                        <div class="card-tag tag-green" style="background-color: #78C850; color: white; border: 2px solid var(--poke-black); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 6 SYNTAX</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">ASSIGNMENT -CONSTANTS & VARIABLES</h2>
                     </div>
                     <p class="card-desc">ASSIGNMENT(CONSTANTS & VARIABLES) in Chapter 2</p>
@@ -139,7 +166,7 @@
 
                 <div class="card" data-chapter="ch3" data-activity-id="act7">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag tag-blue" style="background-color: #6890F0; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 10 LOGIC</div>
+                        <div class="card-tag tag-blue" style="background-color: #6890F0; color: white; border: 2px solid var(--poke-black); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 10 LOGIC</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;"> Laboratory Activity - Input & Output Statement</h2>
                     </div>
                     <p class="card-desc"> Input & Output Statement in Chapter 3</p>
@@ -152,7 +179,7 @@
 
                 <div class="card" data-chapter="ch4" data-activity-id="act8">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag tag-red" style="background-color: #F08030; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 15 OOP</div>
+                        <div class="card-tag tag-red" style="background-color: #F08030; color: white; border: 2px solid var(--poke-black); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 15 OOP</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">Laboratory Exercise - CONTROL STRUCTURE (Using Selection Statement)</h2>
                     </div>
                     <p class="card-desc">CONTROL STRUCTURE(Using Selection Statement) in Chapter 4</p>
@@ -165,7 +192,7 @@
 
                 <div class="card" data-chapter="ch4" data-activity-id="act9">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag tag-red" style="background-color: #F08030; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 16 OOP</div>
+                        <div class="card-tag tag-red" style="background-color: #F08030; color: white; border: 2px solid var(--poke-black); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 16 OOP</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">LABORATORY EXERCISES - CONTROL STRUCTURES (Looping)</h2>
                     </div>
                     <p class="card-desc">CONTROL STRUCTURES(Looping) in Chapter 4</p>
@@ -178,7 +205,7 @@
 
                 <div class="card" data-chapter="ch4" data-activity-id="act10">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag tag-red" style="background-color: #F08030; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 18 OOP</div>
+                        <div class="card-tag tag-red" style="background-color: #F08030; color: white; border: 2px solid var(--poke-black); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 18 OOP</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">PRACTICE TASK- CONTROL STATEMENTS</h2>
                     </div>
                     <p class="card-desc">CONTROL STATEMENTS in Chapter 4</p>
@@ -191,7 +218,7 @@
 
                 <div class="card" data-chapter="ch4" data-activity-id="act11">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag tag-red" style="background-color: #F08030; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 20 OOP</div>
+                        <div class="card-tag tag-red" style="background-color: #F08030; color: white; border: 2px solid var(--poke-black); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 20 OOP</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">Assignment 1- Control Structures</h2>
                     </div>
                     <p class="card-desc">Assignment(Control Structures) in Chapter 4</p>
@@ -204,7 +231,7 @@
 
                 <div class="card" data-chapter="ch4" data-activity-id="act12">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag tag-red" style="background-color: #F08030; color: white; border: 2px solid var(--poke-black); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 25 OOP</div>
+                        <div class="card-tag tag-red" style="background-color: #F08030; color: white; border: 2px solid var(--poke-black); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 25 OOP</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">ELEVATOR WITH MULTIPLE PASSENGERS</h2>
                     </div>
                     <p class="card-desc">ELEVATOR in Chapter 4</p>
@@ -217,7 +244,7 @@
 
                 <div class="card" data-chapter="ch5" data-activity-id="act13">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag" style="background-color: var(--poke-black); color: white; border: 2px solid var(--text-muted); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 30 ADVANCED</div>
+                        <div class="card-tag" style="background-color: var(--poke-black); color: white; border: 2px solid var(--text-muted); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 30 ADVANCED</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">LABORATORY ACTIVITY # 1 - CREATING OBJECT (SHIRT)</h2>
                     </div>
                     <p class="card-desc">CREATING OBJECT(SHIRT) in Chapter 5</p>
@@ -230,7 +257,7 @@
 
                 <div class="card" data-chapter="ch5" data-activity-id="act14">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag" style="background-color: var(--poke-black); color: white; border: 2px solid var(--text-muted); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 35 ADVANCED</div>
+                        <div class="card-tag" style="background-color: var(--poke-black); color: white; border: 2px solid var(--text-muted); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 35 ADVANCED</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;"> LABORATORY ACTIVITY # 2- CREATING OBJECT (CUSTOMER)</h2>
                     </div>
                     <p class="card-desc"> CREATING OBJECT(CUSTOMER) in Chapter 5</p>
@@ -243,7 +270,7 @@
 
                 <div class="card" data-chapter="ch5" data-activity-id="act15">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag" style="background-color: var(--poke-black); color: white; border: 2px solid var(--text-muted); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 40 ADVANCED</div>
+                        <div class="card-tag" style="background-color: var(--poke-black); color: white; border: 2px solid var(--text-muted); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 40 ADVANCED</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">Laboratory Activity # 3- CREATING OBJECT (PAYMENT)</h2>
                     </div>
                     <p class="card-desc">CREATING OBJECT(PAYMENT) in Chapter 5</p>
@@ -256,7 +283,7 @@
 
                 <div class="card" data-chapter="ch5" data-activity-id="act16">
                     <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 1rem; flex-wrap: wrap;">
-                        <div class="card-tag" style="background-color: var(--poke-black); color: white; border: 2px solid var(--text-muted); border-radius: 20px; font-size: 0.5rem; padding: 6px 10px; margin-bottom: 0;">LV. 50 MASTER</div>
+                        <div class="card-tag" style="background-color: var(--poke-black); color: white; border: 2px solid var(--text-muted); border-radius: 8px; font-size: 0.6rem; padding: 0.8rem 1.2rem; margin-bottom: 0;">LV. 50 MASTER</div>
                         <h2 class="card-title" style="margin-bottom: 0; line-height: 1.4;">Laboratory Exercise # 4- CREATING OBJECT (ORDER FORM)</h2>
                     </div>
                     <p class="card-desc">CREATING OBJECT(ORDER FORM) in Chapter 5</p>
@@ -292,7 +319,7 @@
                 <button class="close-pdf-btn close-modal-btn">X</button>
             </div>
             <div class="modal-body">
-                    <embed id="pdf-iframe" class="pdf-viewer" src="" type="application/pdf" width="100%" height="100%">
+                <embed id="pdf-iframe" class="pdf-viewer" src="" type="application/pdf" width="100%" height="100%">
             </div>
         </div>
     </div>
@@ -471,8 +498,8 @@ public class Delos_Santos_Unary2
         System.out.println("Output:");
         System.out.println("  a. months =" + totalMonths + " months");
         System.out.println("  b. days= " + totalDays + " days");
-        System.out.printf("  c. Hours= %, d\n", totalHours);
-        System.out.printf("  d. Seconds= %, d\n", totalSeconds);
+        System.out.printf("  c. Hours= %, d\\n", totalHours);
+        System.out.printf("  d. Seconds= %, d\\n", totalSeconds);
 
  }
 }`,
@@ -507,7 +534,7 @@ public class DelosSantos_InputOutput{
 
             int age = cy - y;
 
-            System.out.println("\n");
+            System.out.println("\\n");
             System.out.println("    hi " +nn+ ", I hope we could celebrate this coming " +m+ " as you turn " +age+ " years old.");
             System.out.println("    Let's watch that " +fm+ " movie that you used to watch. While having " +ff+ ".");
             System.out.println("    Perhaps you could also teach me how to " +hi+ ".");
@@ -534,31 +561,31 @@ public class Seasons {
             case "DECEMBER":
             case "JANUARY":
             case "FEBRUARY":
-                System.out.println("\"To appreciate the beauty of a snowflake it is necessary to stand out in the cold.\"");
+                System.out.println("\\"To appreciate the beauty of a snowflake it is necessary to stand out in the cold.\\"");
                 break;
 
             // Spring
             case "MARCH":
             case "APRIL":
             case "MAY":
-                System.out.println("\"Spring is the time of plans and projects.\"");
+                System.out.println("\\"Spring is the time of plans and projects.\\"");
                 break;
 
             // Summer
             case "JUNE":
             case "JULY":
             case "AUGUST":
-                System.out.println("\"Summer afternoon—summer afternoon; to me those have always been the two most beautiful words in the English language.\"");
+                System.out.println("\\"Summer afternoon—summer afternoon; to me those have always been the two most beautiful words in the English language.\\"");
                 break;
 
             // Fall
             case "SEPTEMBER":
             case "OCTOBER":
             case "NOVEMBER":
-                System.out.println("\"And all at once, summer collapsed into fall.\"");
+                System.out.println("\\"And all at once, summer collapsed into fall.\\"");
                 break;
 
-            default: System.out.println("\"Sorry, you have inputted an invalid or misspelled value of month of the year!\"");
+            default: System.out.println("\\"Sorry, you have inputted an invalid or misspelled value of month of the year!\\"");
                 break;
         }
 
@@ -1069,7 +1096,7 @@ S
     public void displayOrderInfo() {
         System.out.println("===============================================================");
         System.out.println("                      SAM CLOTHING INC.");
-        System.out.println("                  \"The Best SHIRT Maker\"");
+        System.out.println("                  \\"The Best SHIRT Maker\\"");
         System.out.println("===============================================================");
         System.out.println("Name: " + name + " \\t\\tDate: " + date);
         System.out.println("Address: " + address);
@@ -1237,9 +1264,19 @@ public class OrderTest {
                     if (container.classList.contains("show")) {
                         btn.innerText = "Close Inline";
                         btn.style.backgroundColor = "var(--poke-red)";
+                        
+                        // NEW: Expand Card vertically and horizontally
+                        card.classList.add("card-expanded");
+                        
+                        // Scroll to the card so it's perfectly in view
+                        setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+                        
                     } else {
                         btn.innerText = "Inline View";
                         btn.style.backgroundColor = "#78C850";
+                        
+                        // Revert Card to original size
+                        card.classList.remove("card-expanded");
                     }
                 });
             });
